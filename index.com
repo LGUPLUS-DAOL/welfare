@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>광주광역시 복지관 보이스피싱 예방 캠페인</title>
+    <!-- Tailwind CSS 및 FontAwesome (CDN 사용으로 깃허브 배포 시 별도 설정 불필요) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #FDFBF7; /* 미색 배경 - 어르신 눈 보호 */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .uplus-blue { background-color: #004F9E; }
+        .uplus-text-blue { color: #004F9E; }
+        .highlight-yellow { background-color: #FFEB3B; }
+        .btn-yellow { background-color: #FFD600; color: #000; font-weight: bold; }
+        .btn-yellow:hover { background-color: #FFC400; }
+
+        .font-large { font-size: 1.5rem; } /* 어르신용 큰 글씨 24px */
+        .font-xlarge { font-size: 2rem; }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* 수료증 모달 스타일 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .certificate {
+            background: white;
+            padding: 3rem;
+            border: 10px double #004F9E;
+            text-align: center;
+            max-width: 90%;
+            width: 500px;
+        }
+
+        /* 애니메이션 효과 */
+        @keyframes pulse-red {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-pulse-custom {
+            animation: pulse-red 2s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 상단 헤더 -->
+    <header class="uplus-blue text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-xl uppercase">LG Uplus</span>
+                <span class="text-sm border-l pl-2 border-white/50">광주광역시 복지관</span>
+            </div>
+            <div class="text-xs text-right opacity-90">
+                광주경찰청 보이스피싱 전담부서 협업
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 비주얼 섹션 -->
+    <section class="py-12 px-4 text-center">
+        <div class="container mx-auto">
+            <span class="uplus-text-blue font-bold text-lg mb-2 block">우리 이웃을 지키는 따뜻한 연결</span>
+            <h1 class="font-xlarge font-bold mb-6 leading-tight">
+                어르신, <span class="highlight-yellow px-1">모르는 번호</span>로 온 문자<br>
+                혹시 아들인 줄 알고 누르셨나요?
+            </h1>
+            
+            <div class="max-w-md mx-auto mb-8 relative">
+                <!-- 메인 이미지: 모르는 번호에 대한 경각심 이미지 -->
+                <img src="https://images.unsplash.com/photo-1616077168712-fc6c788db4af?auto=format&fit=crop&q=80&w=800" 
+                     alt="스마트폰에 뜨는 모르는 번호 전화" 
+                     class="rounded-3xl shadow-lg border-4 border-white w-full">
+                <div class="absolute top-4 right-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold animate-pulse-custom">
+                    <i class="fas fa-exclamation-triangle mr-1"></i> 의심 번호 주의!
+                </div>
+            </div>
+
+            <p class="font-large mb-8">
+                안녕하세요, 어르신~ 광주 LG유플러스입니다.<br>
+                요즘 아들, 딸을 사칭해서 돈을 요구하는 나쁜 사람들이 많아요.<br>
+                저희가 어르신들의 소중한 재산을 지켜드릴게요!
+            </p>
+            <a href="#register-form" class="btn-yellow text-2xl py-5 px-10 rounded-full shadow-xl inline-block transition-transform hover:scale-105">
+                무료 안심 등록하기
+            </a>
+        </div>
+    </section>
+
+    <!-- 실제 사례 섹션 -->
+    <section class="bg-gray-100 py-12 px-4">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="font-xlarge font-bold text-center mb-10">실제 이런 일이 있었어요</h2>
+            <div class="card border-l-8 border-red-500">
+                <p class="font-large italic mb-4">"엄마, 나 휴대폰 액정 깨져서 급해... 이 링크 눌러봐"</p>
+                <p class="text-gray-600 font-medium">광주 남구에 사시는 김OO 어르신(72세)은 아들인 줄 알고 문자에 적힌 주소를 눌렀다가 500만 원의 피해를 입으셨습니다.</p>
+            </div>
+            <p class="text-center font-bold text-red-600 font-large animate-bounce">남의 일이 아닙니다. 예방만이 답입니다!</p>
+        </div>
+    </section>
+
+    <!-- 유플러스 혜택 섹션 -->
+    <section class="py-12 px-4 container mx-auto">
+        <h2 class="font-xlarge font-bold text-center mb-10">LG유플러스가 드리는 2가지 약속</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="card text-center transition-all hover:shadow-xl">
+                <div class="uplus-blue w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-shield-halved text-white text-4xl"></i>
+                </div>
+                <h3 class="font-bold text-2xl mb-4">보이스피싱 철벽 예방</h3>
+                <p class="font-large text-gray-700">모르는 번호 차단부터 스팸 문자 자동 필터링까지 꼼꼼하게 도와드려요.</p>
+            </div>
+            <div class="card text-center transition-all hover:shadow-xl">
+                <div class="uplus-blue w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-file-invoice-dollar text-white text-4xl"></i>
+                </div>
+                <h3 class="font-bold text-2xl mb-4">부당 요금 컨설팅</h3>
+                <p class="font-large text-gray-700">혹시 나도 모르게 빠져나가는 통신 요금이 있는지 직접 확인해 드립니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 참여형 퀴즈 섹션 -->
+    <section class="py-12 px-4 bg-blue-50">
+        <div class="container mx-auto max-w-2xl text-center">
+            <h2 class="font-xlarge font-bold mb-6">참여형 안심 퀴즈</h2>
+            <div class="card">
+                <p class="font-large font-bold mb-8">"아들이 휴대폰이 고장 났다며 모르는 번호로 돈을 보내달라고 문자를 보냈습니다. 바로 돈을 보내야 할까요?"</p>
+                <div class="flex flex-col sm:flex-row justify-around gap-4">
+                    <button onclick="handleQuiz(true)" class="bg-red-500 text-white text-4xl py-6 px-10 rounded-2xl w-full hover:bg-red-600 transition-colors">O (예)</button>
+                    <button onclick="handleQuiz(false)" class="bg-green-500 text-white text-4xl py-6 px-10 rounded-2xl w-full hover:bg-green-600 transition-colors">X (아니오)</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 상담 신청 폼 -->
+    <section id="register-form" class="py-16 px-4 container mx-auto max-w-lg">
+        <div class="card shadow-2xl border-4 border-yellow-400">
+            <h2 class="font-xlarge font-bold text-center mb-2">안심 서비스 신청</h2>
+            <p class="text-center text-gray-600 mb-8">신청해 주시면 LG유플러스 직원이<br>직접 방문하거나 전화를 드립니다.</p>
+            <form onsubmit="handleFormSubmit(event)">
+                <div class="mb-6">
+                    <label class="block font-bold text-xl mb-2">성함</label>
+                    <input type="text" id="userName" required placeholder="성함을 입력해주세요" class="w-full p-4 border-2 border-gray-300 rounded-xl text-xl focus:border-blue-500 outline-none">
+                </div>
+                <div class="mb-8">
+                    <label class="block font-bold text-xl mb-2">전화번호</label>
+                    <input type="tel" id="userTel" required placeholder="010-0000-0000" class="w-full p-4 border-2 border-gray-300 rounded-xl text-xl focus:border-blue-500 outline-none">
+                </div>
+                <button type="submit" class="btn-yellow w-full py-6 rounded-xl text-2xl shadow-lg transform active:scale-95 transition-all">
+                    신청하고 선물 받기 <i class="fas fa-gift ml-2"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 하단 푸터 / 연락처 -->
+    <footer class="bg-gray-800 text-white py-12 px-4">
+        <div class="container mx-auto text-center">
+            <p class="font-bold text-2xl mb-4 text-yellow-400">피해가 의심될 땐 바로 전화하세요!</p>
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <a href="tel:112" class="bg-red-600 px-6 py-3 rounded-full font-bold text-xl flex items-center">
+                    <i class="fas fa-phone mr-2"></i> 경찰청 신고 : 112
+                </a>
+                <a href="tel:1332" class="bg-blue-600 px-6 py-3 rounded-full font-bold text-xl flex items-center">
+                    <i class="fas fa-university mr-2"></i> 금융감독원 : 1332
+                </a>
+            </div>
+            <p class="text-gray-400">© 2025 LG Uplus Gwangju. All Rights Reserved.</p>
+            <p class="text-gray-400 text-sm mt-2 font-medium">본 캠페인은 광주광역시 경찰청 보이스피싱 전담부서와 함께합니다.</p>
+        </div>
+    </footer>
+
+    <!-- 수료증 팝업 -->
+    <div id="resultModal" class="modal">
+        <div class="certificate">
+            <h2 class="uplus-text-blue text-3xl font-bold mb-4">보이스피싱 안심 수료증</h2>
+            <p class="text-xl mb-6 font-bold leading-relaxed">
+                <span id="displayUserName" class="text-2xl border-b-2 border-blue-500">어르신</span>님은<br>
+                LG유플러스와 광주경찰청이 함께하는<br>
+                피싱 예방 교육을 이수하였기에<br>
+                이 증서를 수여합니다.
+            </p>
+            <div class="border-t border-b py-4 mb-6">
+                <p class="text-lg text-gray-600">광주광역시 보이스피싱 예방 지킴이</p>
+                <p class="text-2xl font-bold mt-2 text-blue-800">LG 유플러스 • 광주경찰청</p>
+            </div>
+            <div class="flex flex-col gap-2">
+                <button onclick="shareKakao()" class="bg-[#FEE500] text-[#3c1e1e] py-4 px-6 rounded-xl font-bold text-xl">카카오톡 공유하기</button>
+                <button onclick="closeModal()" class="bg-gray-200 text-gray-700 py-4 px-6 rounded-xl font-bold text-xl">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 퀴즈 처리 함수
+        function handleQuiz(isYes) {
+            if (isYes) {
+                alert("아이고 어르신! 아니에요!\n아들인 척하는 사기꾼일 확률이 매우 높습니다.\n절대 먼저 돈을 보내지 마세요!");
+            } else {
+                alert("정답입니다! 장하십니다!\n아들 목소리를 직접 듣기 전까지는 절대 믿으시면 안 돼요!");
+            }
+        }
+
+        // 폼 제출 처리 함수
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('userName').value;
+            document.getElementById('displayUserName').innerText = name;
+            document.getElementById('resultModal').style.display = 'flex';
+        }
+
+        // 모달 닫기
+        function closeModal() {
+            document.getElementById('resultModal').style.display = 'none';
+            alert("신청이 잘 되었습니다!\n곧 LG유플러스 전문 상담원이 연락드릴게요.\n선물은 복지관 방문 시 꼭 챙겨드릴게요!");
+        }
+
+        // 공유 기능 (가상)
+        function shareKakao() {
+            alert("카카오톡으로 친구들에게 '안심 수료증'을 공유합니다.\n함께 지키는 광주광역시가 되어요!");
+        }
+    </script>
+</body>
+</html>
