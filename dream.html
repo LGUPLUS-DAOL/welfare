@@ -1,1 +1,341 @@
 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG유플러스 월곡동 드림랜드점 | 산뜻한 통신 주치의</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;800&display=swap');
+        
+        body { 
+            font-family: 'Pretendard', sans-serif; 
+            letter-spacing: -0.02em;
+        }
+        
+        .uplus-pink { color: #FF4B91; }
+        .uplus-bg-pink { background: linear-gradient(135deg, #FF4B91 0%, #FF80B5 100%); }
+        .naver-green { background-color: #03C75A; }
+        .naver-green:hover { background-color: #02b350; }
+        
+        .soft-bg { background-color: #F8FAFC; }
+        .card-hover:hover { transform: translateY(-8px); transition: all 0.3s ease; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        
+        /* 산뜻한 애니메이션 배경 */
+        .hero-gradient {
+            background: linear-gradient(120deg, #FFF5F8 0%, #F0F9FF 100%);
+            position: relative;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0, 0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #FFF0F6 0%, #FFFFFF 100%);
+            border: 2px dashed #FFD1E3;
+        }
+
+        /* USIM 카드 디자인 특화 */
+        .usim-container {
+            perspective: 1000px;
+            width: 240px;
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .usim-card {
+            width: 180px;
+            height: 260px;
+            background: white;
+            border-radius: 16px;
+            border: 4px solid #fce7f3;
+            box-shadow: 0 25px 50px -12px rgba(255, 75, 145, 0.2);
+            position: relative;
+            transform: rotate(-5deg);
+            animation: simFloat 4s ease-in-out infinite;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+        }
+
+        .usim-chip {
+            width: 80px;
+            height: 60px;
+            background: linear-gradient(135deg, #ffd700 0%, #ffcc00 100%);
+            border-radius: 8px;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #eab308;
+        }
+
+        .usim-chip::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(90deg, transparent 48%, #eab308 50%, transparent 52%),
+                linear-gradient(0deg, transparent 48%, #eab308 50%, transparent 52%);
+            background-size: 20px 20px;
+        }
+
+        @keyframes simFloat {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        /* 4월 13일 강조 스타일 */
+        .date-highlight {
+            background: #FF4B91;
+            color: white;
+            padding: 2px 12px;
+            border-radius: 10px;
+            font-size: 1.4em;
+            display: inline-block;
+            margin: 0 4px;
+            box-shadow: 0 4px 12px rgba(255, 75, 145, 0.4);
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-700 pb-20 md:pb-0">
+
+    <!-- 상단 네비게이션 -->
+    <nav class="sticky top-0 z-50 glass-nav border-b border-pink-50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-2xl font-extrabold tracking-tighter text-slate-900">
+                    LG <span class="uplus-pink">U+</span>
+                </span>
+                <span class="hidden sm:inline-block text-xs font-bold bg-pink-100 uplus-pink px-2 py-0.5 rounded-md">월곡동 드림랜드점</span>
+            </div>
+            <div class="flex gap-4">
+                <a href="tel:010-XXXX-XXXX" class="text-sm font-bold text-slate-600 flex items-center gap-2 hover:uplus-pink transition-colors">
+                    <i class="fa-solid fa-phone-volume"></i> <span class="hidden md:inline">상담 문의</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <header class="hero-gradient pt-20 pb-32 px-6 overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-white/80 border border-pink-100 px-4 py-2 rounded-full shadow-sm mb-8 floating">
+                <span class="flex h-2 w-2 rounded-full bg-pink-500 animate-pulse"></span>
+                <span class="text-sm font-semibold uplus-pink uppercase tracking-wider">Dreamland Store</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-[1.2] mb-8">
+                복잡한 통신 고민, <br>
+                <span class="uplus-pink underline underline-offset-8 decoration-pink-200">기분 좋은 상담</span>으로 해결하세요
+            </h1>
+            
+            <p class="text-lg md:text-xl text-slate-500 mb-12 font-medium max-w-2xl mx-auto leading-relaxed">
+                월곡동 주민분들의 일상을 더 즐겁게! <br class="hidden md:block">
+                정직한 혜택과 다정한 설명으로 모십니다.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://naver.me/x9BsZUht" target="_blank" class="uplus-bg-pink text-white px-8 py-5 rounded-2xl font-bold text-xl shadow-[0_10px_25px_-5px_rgba(255,75,145,0.4)] hover:scale-105 transition-all w-full sm:w-[280px] text-center flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span class="whitespace-nowrap">방문 예약하기</span>
+                </a>
+                <button onclick="openTalkTalk()" class="naver-green text-white px-8 py-5 rounded-2xl font-bold text-xl shadow-[0_10px_25px_-5px_rgba(3,199,90,0.3)] hover:scale-105 transition-all w-full sm:w-[280px] flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-comments"></i>
+                    <span class="whitespace-nowrap">네이버 톡톡 문의</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="absolute top-20 -left-20 w-64 h-64 bg-pink-100/50 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 -right-20 w-80 h-80 bg-blue-100/50 rounded-full blur-3xl"></div>
+    </header>
+
+    <!-- 노후 USIM 교체 안내 섹션 -->
+    <section class="py-20 px-6 bg-white relative">
+        <div class="max-w-5xl mx-auto">
+            <div class="highlight-box rounded-[3rem] p-8 md:p-14 shadow-xl flex flex-col lg:flex-row items-center gap-12 overflow-hidden relative border-pink-200">
+                
+                <div class="flex-1 z-10">
+                    <div class="inline-block bg-pink-500 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest shadow-sm">SECURITY CAMPAIGN</div>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6 leading-[1.3]">
+                        노후 USIM <span class="uplus-pink">무료 교체</span>로<br>
+                        보이스피싱 철벽 방어!
+                    </h2>
+                    <div class="space-y-4 mb-10 text-lg">
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1.5 w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-[10px] text-emerald-600 font-bold"></i>
+                            </div>
+                            <p class="font-semibold text-slate-700">강화된 보안 체계(IMSI)로 더 안전하게</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1.5 w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-[10px] text-emerald-600 font-bold"></i>
+                            </div>
+                            <p class="font-semibold text-slate-700">U+one 앱으로 쉽고 간편한 업데이트</p>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="mt-1.5 w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-check text-[10px] text-emerald-600 font-bold"></i>
+                            </div>
+                            <p class="font-semibold text-slate-700">2026년 말까지 넉넉한 서비스 기간</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-pink-50 p-6 rounded-[2rem] border-2 border-pink-100 shadow-sm inline-block">
+                        <p class="text-sm font-bold text-pink-400 mb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-bell animate-bounce"></i> 대상 고객 및 서비스 시작일
+                        </p>
+                        <p class="text-xl md:text-2xl font-extrabold text-slate-800 leading-snug">
+                            신규/기변 고객님은 <br class="sm:hidden">
+                            <span class="date-highlight">4월 13일</span>부터 즉시 가능!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-[400px] flex justify-center py-10">
+                    <div class="usim-container">
+                        <div class="usim-card">
+                            <div class="absolute top-0 right-0 w-12 h-12 bg-white border-b-4 border-l-4 border-pink-100 rotate-45 -translate-y-6 -translate-x-[-24px] z-10"></div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="text-[14px] font-black uplus-pink tracking-tighter italic">LG U+</span>
+                                <i class="fa-solid fa-wifi text-pink-200"></i>
+                            </div>
+                            <div class="usim-chip"></div>
+                            <div class="mt-auto text-right">
+                                <span class="text-[10px] font-bold text-slate-300">LTE/5G SECURITY</span>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-6 -right-4 w-40 h-40 bg-blue-600 rounded-full border-[10px] border-white shadow-2xl z-30 flex flex-col items-center justify-center text-white floating text-center p-2">
+                            <i class="fa-solid fa-shield-halved text-5xl mb-2"></i>
+                            <span class="text-xl font-black tracking-tighter leading-tight">안심 차단</span>
+                        </div>
+                        <div class="absolute -top-6 -left-8 bg-emerald-500 text-white px-8 py-4 rounded-[2rem] shadow-2xl font-black text-2xl z-30 rotate-[-15deg] flex items-center gap-2 border-4 border-white">
+                            <i class="fa-solid fa-gift"></i> 무료
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 서비스 가치 섹션 -->
+    <section class="py-24 px-6 max-w-6xl mx-auto relative z-20">
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-100/50 card-hover border border-slate-50 text-center">
+                <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold mb-4 text-slate-800">정직한 요금</h3>
+                <p class="text-slate-500 leading-relaxed text-sm md:text-base">불필요한 부가서비스 No!<br>최적의 요금을 찾아드려요.</p>
+            </div>
+            
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-100/50 card-hover border border-slate-50 text-center">
+                <div class="w-16 h-16 bg-pink-50 uplus-pink rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
+                    <i class="fa-solid fa-face-smile-wink"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold mb-4 text-slate-800">쉬운 설명</h3>
+                <p class="text-slate-500 leading-relaxed text-sm md:text-base">가족에게 말하듯 쉽고<br>친절하게 설명해 드립니다.</p>
+            </div>
+
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-xl shadow-slate-100/50 card-hover border border-slate-50 text-center">
+                <div class="w-16 h-16 bg-emerald-50 text-emerald-500 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold mb-4 text-slate-800">동네 아지트</h3>
+                <p class="text-slate-500 leading-relaxed text-sm md:text-base">휴대폰 궁금증 해결사!<br>언제든 편하게 들러주세요.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 위치 및 시간 안내 -->
+    <section class="py-20 px-6 bg-slate-50">
+        <div class="max-w-4xl mx-auto bg-white rounded-[3rem] overflow-hidden shadow-sm border border-slate-100">
+            <div class="grid md:grid-cols-2 divide-x divide-slate-50">
+                <!-- 매장 안내 왼쪽 -->
+                <div class="p-12 bg-white">
+                    <h2 class="text-3xl font-extrabold text-slate-900 mb-8">매장 안내</h2>
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="text-pink-400 text-xl"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <p class="font-bold text-slate-800">오시는 길</p>
+                                <p class="text-slate-500 text-sm mt-1 leading-relaxed">광주 광산구 풍영로 83 <br> (월곡동 드림랜드 사우나) 1층</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-blue-400 text-xl"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <p class="font-bold text-slate-800">영업 시간</p>
+                                <p class="text-slate-500 text-sm mt-1">월~토 10:00 - 18:00</p>
+                                <p class="uplus-pink text-xs font-bold mt-1">매주 일요일은 휴무입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 지도 보기 오른쪽: 버튼 색상을 네이버 초록색으로 변경 -->
+                <div class="bg-white relative min-h-[300px] flex items-center justify-center p-8">
+                    <div class="relative bg-white border border-slate-100 p-8 rounded-[2.5rem] shadow-xl shadow-slate-100/50 text-center w-full max-w-[280px]">
+                        <div class="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-map-location-dot text-4xl text-emerald-500"></i>
+                        </div>
+                        <p class="text-lg font-bold text-slate-800 mb-1">드림랜드 사우나 1층!</p>
+                        <p class="text-xs text-slate-400 mb-6 font-medium">찾아오시기 정말 쉬워요</p>
+                        <a href="https://naver.me/x9BsZUht" target="_blank" class="block naver-green text-white text-sm px-8 py-3 rounded-full font-bold hover:opacity-90 transition-all shadow-lg shadow-emerald-100">네이버 지도보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="bg-white py-16 px-6 border-t border-slate-100">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="text-center md:text-left">
+                <div class="font-extrabold text-slate-900 text-xl mb-4 tracking-tighter">
+                    LG <span class="uplus-pink text-2xl">U+</span> <span class="font-normal text-slate-400">월곡동 드림랜드점</span>
+                </div>
+                <p class="text-slate-400 text-sm">광주광역시 광산구 풍영로 83 드림랜드 1층 116호</p>
+            </div>
+            <div class="flex gap-4">
+                <button onclick="openTalkTalk()" class="w-12 h-12 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center hover:bg-emerald-100 transition-colors">
+                    <i class="fa-solid fa-comment-dots"></i>
+                </button>
+                <a href="https://naver.me/x9BsZUht" target="_blank" class="w-12 h-12 rounded-full bg-pink-50 uplus-pink flex items-center justify-center hover:bg-pink-100 transition-colors">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 모바일 전용 하단 탭바 -->
+    <div class="fixed bottom-6 left-6 right-6 flex gap-3 md:hidden z-50">
+        <a href="https://naver.me/x9BsZUht" class="flex-[2] bg-slate-900 text-white h-16 rounded-2xl flex items-center justify-center gap-2 font-bold text-lg shadow-xl">
+            <i class="fa-solid fa-calendar-day text-pink-400"></i> 방문예약
+        </a>
+        <button onclick="openTalkTalk()" class="flex-1 naver-green text-white h-16 rounded-2xl flex items-center justify-center text-2xl shadow-xl">
+            <i class="fa-solid fa-comment-dots"></i>
+        </button>
+    </div>
+
+    <script>
+        function openTalkTalk() {
+            window.open('https://talk.naver.com/W4Z6Y2', '_blank');
+        }
+    </script>
+</body>
+</html>
